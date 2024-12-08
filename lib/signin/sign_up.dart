@@ -1,5 +1,6 @@
+import 'package:edconnex/main/main_page/main_page.dart';
 import 'package:edconnex/signin/sign_up2..dart';
-import 'package:edconnex/widgets/widgetsforpages.dart';
+import 'package:edconnex/main/main_page/widgets/widgetsforpages.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:back_button_interceptor/back_button_interceptor.dart';
@@ -61,7 +62,8 @@ class _signup_pageState extends State<signup_page> {
                 alignment: Alignment.center,
                 child: Text(
                   "Join us to start searching",
-                  style: GoogleFonts.rubik(fontSize: 24, fontWeight: FontWeight.bold),
+                  style: GoogleFonts.rubik(
+                      fontSize: 24, fontWeight: FontWeight.bold),
                 ),
               ),
               SizedBox(
@@ -72,12 +74,12 @@ class _signup_pageState extends State<signup_page> {
                 children: <Widget>[
                   Expanded(
                     child: reusableGestureDetector(
-                        path: 'assets/images/icons8-google-482.svg', name: 'Google'),
+                        path: 'assets/icons8-google-482.svg', name: 'Google'),
                   ),
                   SizedBox(width: 4), // Add space between the buttons
                   Expanded(
                     child: reusableGestureDetector(
-                        path: 'assets/images/facebook.svg', name: 'Facebook'),
+                        path: 'assets/facebook.svg', name: 'Facebook'),
                   ),
                 ],
               ),
@@ -121,8 +123,8 @@ class _signup_pageState extends State<signup_page> {
                       // });
                     } else {
                       ScaffoldMessenger.of(context).showSnackBar(SnackBar(
-                          content: Text(
-                              "Please accept the Terms and Conditions")));
+                          content:
+                              Text("Please accept the Terms and Conditions")));
                     }
                   },
                   child: Container(
@@ -132,15 +134,22 @@ class _signup_pageState extends State<signup_page> {
                       borderRadius: BorderRadius.all(Radius.circular(15)),
                     ),
                     child: _isLoading
-                        ? CircularProgressIndicator(
-                    )
-                        : Text(
-                      "Sign Up",
-                      style: GoogleFonts.rubik(
-                          color: Colors.white,
-                          fontWeight: FontWeight.bold,
-                          fontSize: 18),
-                    ),
+                        ? CircularProgressIndicator()
+                        : TextButton(
+                            onPressed: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) => mainpage()));
+                            },
+                            child: Text(
+                              "Sign Up",
+                              style: GoogleFonts.rubik(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            ),
+                          ),
                   ),
                 ),
               ),
@@ -184,12 +193,13 @@ class _signup_pageState extends State<signup_page> {
                     onTap: () {
                       Navigator.push(
                           context,
-                          MaterialPageRoute(builder: (context) => sign_uptwo()));
+                          MaterialPageRoute(
+                              builder: (context) => sign_uptwo()));
                     },
                     child: Text(
                       "Have an Account? Log In",
-                      style: GoogleFonts.rubik(
-                          color: Colors.black, fontSize: 14),
+                      style:
+                          GoogleFonts.rubik(color: Colors.black, fontSize: 14),
                     ),
                   ),
                 ],

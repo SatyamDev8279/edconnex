@@ -79,7 +79,7 @@ class _LoginScreenOneState extends State<LoginScreenOne> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(170),
             child: Image.asset(
-              'assets/images/linkedin-network-550x550.jpg',
+              'assets/linkedin-network-550x550.jpg',
               fit: BoxFit.cover,
             ),
           ),
@@ -119,7 +119,7 @@ class _LoginScreenOneState extends State<LoginScreenOne> {
         width: screenWidth * 0.8,
         child: Text(
           'Contrary to popular belief, Lorem Ipsum is not simply random text. '
-              'It has roots in a piece of it over 2000 years old.',
+          'It has roots in a piece of it over 2000 years old.',
           textAlign: TextAlign.center,
           style: GoogleFonts.rubik(
             textStyle: TextStyle(

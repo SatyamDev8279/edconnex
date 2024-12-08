@@ -77,7 +77,7 @@ class _LoginScreenThreeState extends State<LoginScreenThree> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(170),
             child: Image.asset(
-              'assets/images/page3image.jpg',
+              'assets/page3image.jpg',
               fit: BoxFit.cover,
             ),
           ),
@@ -117,7 +117,7 @@ class _LoginScreenThreeState extends State<LoginScreenThree> {
         width: screenWidth * 0.8,
         child: Text(
           'Contrary to popular belief, Lorem Ipsum is not simply random text. '
-              'It has roots in a piece of it over 2000 years old.',
+          'It has roots in a piece of it over 2000 years old.',
           textAlign: TextAlign.center,
           style: GoogleFonts.rubik(
             textStyle: TextStyle(

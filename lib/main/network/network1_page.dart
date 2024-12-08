@@ -47,9 +47,6 @@ class ManageNetworkPage extends StatelessWidget {
       ),
       body: ListView(
         children: [
-          const SizedBox(
-            height: 10,
-          ),
           Container(
             width: double.infinity,
             height: 8,

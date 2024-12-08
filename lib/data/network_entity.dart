@@ -21,7 +21,7 @@ class NetworkEntity {
       username: "John Doe",
     ),
     NetworkEntity(
-      userBgImage: "bg_image_2.png",
+      userBgImage: "bg_image_2.jpeg",
       userProfileImage: "profile_1.jpeg",
       mutualConnections: 22,
       userBio: "Senior Software Engineer",
@@ -49,7 +49,7 @@ class NetworkEntity {
       username: "Ella Hudges",
     ),
     NetworkEntity(
-      userBgImage: "bg_image_2.png",
+      userBgImage: "bg_image_2.jpeg",
       userProfileImage: "profile_5.jpeg",
       mutualConnections: 11,
       userBio: "Flutter Developer & Advocate",

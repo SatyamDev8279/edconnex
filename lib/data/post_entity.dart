@@ -53,7 +53,11 @@ class PostEntity {
         description:
             "Look at this javascript code I don't believe it what kind of people are living in this world haha",
         postImage: "post_image_2.jpg",
-        postImages: [],
+        postImages: [
+          "post_image_2.jpg",
+          "post_image_4.jpg",
+          "post_image_1.jpg"
+        ],
         tags: [],
         totalReacts: 10,
         totalComments: 44,
@@ -118,7 +122,12 @@ class PostEntity {
         description:
             "What's up people\nLook at this Alexander got something new to show you.",
         postImage: "post_image_5.jpg",
-        postImages: [],
+        postImages: [
+          "post_image_3.jpg",
+          "post_image_1.jpg",
+          "post_image_4.jpg",
+          "post_image_2.jpg"
+        ],
         tags: [
           "#gde",
           "#googledevexpert",

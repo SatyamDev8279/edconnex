@@ -1,9 +1,9 @@
+import 'package:edconnex/main/main_page/main_page.dart';
 import 'package:edconnex/signin/sign_up.dart';
-import 'package:edconnex/widgets/bottomsheet.dart';
-import 'package:edconnex/widgets/widgetsforpages.dart';
+import 'package:edconnex/main/main_page/widgets/bottomsheet.dart';
+import 'package:edconnex/main/main_page/widgets/widgetsforpages.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-
 
 class sign_uptwo extends StatefulWidget {
   const sign_uptwo({super.key});
@@ -18,7 +18,6 @@ class _sign_uptwoState extends State<sign_uptwo> {
   final TextEditingController _resetemailController = TextEditingController();
 
   bool _isLoading = false;
-
 
   final _formkey = GlobalKey<FormState>();
   @override
@@ -52,9 +51,10 @@ class _sign_uptwoState extends State<sign_uptwo> {
                 //For the text
                 Container(
                   alignment: Alignment.center,
-                  child:  Text(
+                  child: Text(
                     "Welcome Back",
-                    style: GoogleFonts.rubik(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: GoogleFonts.rubik(
+                        fontSize: 24, fontWeight: FontWeight.bold),
                   ),
                 ),
 
@@ -71,10 +71,10 @@ class _sign_uptwoState extends State<sign_uptwo> {
                   children: <Widget>[
                     // button for google
                     reusableGestureDetector(
-                        path: 'assets/images/icons8-google-482.svg', name: 'Google'),
+                        path: 'assets/icons8-google-482.svg', name: 'Google'),
                     //Button for facebook
                     reusableGestureDetector(
-                        path: 'assets/images/facebook.svg', name: 'Facebook'),
+                        path: 'assets/facebook.svg', name: 'Facebook'),
                   ],
                 ),
                 // in between space
@@ -109,7 +109,8 @@ class _sign_uptwoState extends State<sign_uptwo> {
                   padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
                   child: TextButton(
                     onPressed: () async {
-
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => mainpage()));
                     },
                     child: Container(
                       padding: const EdgeInsets.fromLTRB(100, 10, 100, 10),
@@ -120,12 +121,12 @@ class _sign_uptwoState extends State<sign_uptwo> {
                       child: _isLoading
                           ? CircularProgressIndicator()
                           : Text(
-                        "Sign In",
-                        style: GoogleFonts.rubik(
-                            color: Colors.white,
-                            fontWeight: FontWeight.bold,
-                            fontSize: 18),
-                      ),
+                              "Sign In",
+                              style: GoogleFonts.rubik(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 18),
+                            ),
                     ),
                   ),
                 ),
@@ -145,8 +146,8 @@ class _sign_uptwoState extends State<sign_uptwo> {
                       },
                       child: Text(
                         "Forgot Password?",
-                        style:
-                        GoogleFonts.rubik(color: Colors.black, fontSize: 14),
+                        style: GoogleFonts.rubik(
+                            color: Colors.black, fontSize: 14),
                       ),
                     ),
                     // in between space
@@ -158,14 +159,15 @@ class _sign_uptwoState extends State<sign_uptwo> {
                       onTap: () {
                         Navigator.push(
                             context,
-                            MaterialPageRoute(builder: (context) => signup_page()));
+                            MaterialPageRoute(
+                                builder: (context) => signup_page()));
                       },
                       child: Align(
                         alignment: Alignment.bottomCenter,
                         child: Text(
                           "Don't have an account? Join us",
-                          style:
-                          GoogleFonts.rubik(color: Colors.black, fontSize: 14),
+                          style: GoogleFonts.rubik(
+                              color: Colors.black, fontSize: 14),
                         ),
                       ),
                     ),

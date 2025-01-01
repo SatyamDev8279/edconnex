@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:edconnex/login_pages/login_page3.dart';
+
 class LoginScreenTwo extends StatefulWidget {
   const LoginScreenTwo({super.key});
 
@@ -77,7 +78,7 @@ class _LoginScreenTwoState extends State<LoginScreenTwo> {
           child: ClipRRect(
             borderRadius: BorderRadius.circular(170),
             child: Image.asset(
-              'assets/images/pag2image.png',
+              'assets/pag2image.png',
               fit: BoxFit.cover,
             ),
           ),
@@ -117,7 +118,7 @@ class _LoginScreenTwoState extends State<LoginScreenTwo> {
         width: screenWidth * 0.8,
         child: Text(
           'Contrary to popular belief, Lorem Ipsum is not simply random text. '
-              'It has roots in a piece of it over 2000 years old.',
+          'It has roots in a piece of it over 2000 years old.',
           textAlign: TextAlign.center,
           style: GoogleFonts.rubik(
             textStyle: TextStyle(
@@ -143,7 +144,8 @@ class _LoginScreenTwoState extends State<LoginScreenTwo> {
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => const LoginScreenThree()),
+                MaterialPageRoute(
+                    builder: (context) => const LoginScreenThree()),
               );
             },
             style: ElevatedButton.styleFrom(
@@ -192,4 +194,3 @@ class _LoginScreenTwoState extends State<LoginScreenTwo> {
     );
   }
 }
-

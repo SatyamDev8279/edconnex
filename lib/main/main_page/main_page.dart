@@ -40,7 +40,7 @@ class _mainpageState extends State<mainpage> {
                       backgroundColor: Colors.grey[300],
                       child: ClipRRect(
                           borderRadius: BorderRadius.circular(50),
-                          child: Image.asset("assets/profile_1.jpeg"))),
+                          child: Image.asset("assets/profile_1.jpeg"),)),
                   const SizedBox(height: 10),
                   const Text(
                     "John Doe",

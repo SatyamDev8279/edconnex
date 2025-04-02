@@ -2,6 +2,9 @@ import 'package:edconnex/main/main_page/main_page.dart';
 import 'package:edconnex/main/network/network_page.dart';
 import 'package:edconnex/themes/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:edconnex/phase3/alumnifollow.dart';
+import 'package:edconnex/phase3/clubspage.dart';
+import 'package:edconnex/phase3/groupsoage.dart';
 
 void main() {
   runApp(MyApp());
@@ -18,9 +21,9 @@ class MyApp extends StatelessWidget {
       home: ManageNetworkPage(),
       routes: {
         '/alumniConnect': (context) => const NetworkPage(),
-        '/alumniIFollow': (context) => AlumniIFollowPage(),
-        '/clubsAndEvents': (context) => ClubsAndEventsPage(),
-        '/groups': (context) => GroupsPage(),
+        '/alumniIFollow': (context) => NetworkkPage(),
+        '/clubsAndEvents': (context) => GroupsPage(),
+        '/groups': (context) => ClubssPage(),
       },
     );
   }
@@ -68,7 +71,8 @@ class ManageNetworkPage extends StatelessWidget {
             title: Text('Alumni I Follow'),
             trailing: Text('178'),
             onTap: () {
-              Navigator.pushNamed(context, '/alumniIFollow');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => NetworkkPage()));
             },
           ),
           SizedBox(height: 10),
@@ -78,7 +82,8 @@ class ManageNetworkPage extends StatelessWidget {
             title: Text('Clubs and Events'),
             trailing: Text('13'),
             onTap: () {
-              Navigator.pushNamed(context, '/clubsAndEvents');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => GroupssPage()));
             },
           ),
           SizedBox(height: 10),
@@ -88,7 +93,8 @@ class ManageNetworkPage extends StatelessWidget {
             title: Text('Groups'),
             trailing: Text('55'),
             onTap: () {
-              Navigator.pushNamed(context, '/groups');
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => ClubssPage()));
             },
           ),
           SizedBox(height: 10),

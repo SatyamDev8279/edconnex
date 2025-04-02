@@ -87,16 +87,16 @@ class _NetworkPageState extends State<NetworkPage> {
           color: liLightGrey,
         ),
         const SizedBox(
-          height: 15,
+          height: 10,
         ),
         GridView.builder(
-          padding: const EdgeInsets.symmetric(horizontal: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 1.2),
           shrinkWrap: true,
           physics: const ScrollPhysics(),
           itemCount: networkData.length,
           gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2,
-              mainAxisSpacing: 6,
+              mainAxisSpacing: 2,
               crossAxisSpacing: 6,
               childAspectRatio: 0.6),
           itemBuilder: (context, index) {

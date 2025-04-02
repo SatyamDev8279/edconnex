@@ -67,16 +67,16 @@ class _signup_pageState extends State<signup_page> {
                 ),
               ),
               SizedBox(
-                height: MediaQuery.of(context).size.height * 0.15,
+                height: MediaQuery.of(context).size.height * 0.10,
               ),
               const Row(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: <Widget>[
                   Expanded(
                     child: reusableGestureDetector(
                         path: 'assets/icons8-google-482.svg', name: 'Google'),
                   ),
-                  SizedBox(width: 4), // Add space between the buttons
+                  SizedBox(width: 6), // Add space between the buttons
                   Expanded(
                     child: reusableGestureDetector(
                         path: 'assets/facebook.svg', name: 'Facebook'),
@@ -183,7 +183,7 @@ class _signup_pageState extends State<signup_page> {
                 ],
               ),
               const SizedBox(
-                height: 30,
+                height: 12,
               ),
               //login
               Column(
@@ -196,10 +196,12 @@ class _signup_pageState extends State<signup_page> {
                           MaterialPageRoute(
                               builder: (context) => sign_uptwo()));
                     },
-                    child: Text(
-                      "Have an Account? Log In",
-                      style:
-                          GoogleFonts.rubik(color: Colors.black, fontSize: 14),
+                    child: Center(
+                      child: Text(
+                        "Have an Account? Log In",
+                        style: GoogleFonts.rubik(
+                            color: Colors.black, fontSize: 14),
+                      ),
                     ),
                   ),
                 ],

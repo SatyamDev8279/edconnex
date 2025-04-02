@@ -1,3 +1,5 @@
+import 'package:edconnex/main/home/home_page.dart';
+import 'package:edconnex/main/main_page/main_page.dart';
 import 'package:edconnex/themes/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -73,7 +75,8 @@ class _CreatePageState extends State<CreatePage> {
                           Row(
                             children: [
                               GestureDetector(
-                                  onTap: widget.onCloneClickListener,
+                                  onTap: (){Navigator.push(context,
+                                      MaterialPageRoute(builder: (context) => mainpage()));},
                                   child: const Icon(
                                     Icons.close_outlined,
                                     size: 30,

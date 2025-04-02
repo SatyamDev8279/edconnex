@@ -152,15 +152,16 @@ class _sign_uptwoState extends State<sign_uptwo> {
                     ),
                     // in between space
                     const SizedBox(
-                      height: 20,
+                      height: 10,
                     ),
                     // Sign up
                     GestureDetector(
+
                       onTap: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                                builder: (context) => signup_page()));
+                        // Navigator.push(
+                        //     context,
+                        //     MaterialPageRoute(
+                        //         builder: (context) => signup_page()));
                       },
                       child: Align(
                         alignment: Alignment.bottomCenter,

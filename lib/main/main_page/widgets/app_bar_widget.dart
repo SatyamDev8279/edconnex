@@ -1,3 +1,4 @@
+import 'package:edconnex/phase3/profilepagecode.dart';
 import 'package:edconnex/themes/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -13,12 +14,15 @@ PreferredSizeWidget appBarWidget(BuildContext context,
     elevation: 1,
     backgroundColor: liWhite,
     leading: GestureDetector(
-        onTap: () {},
+        onTap: () {Navigator.push(
+          context,
+          MaterialPageRoute(builder: (context) => LinkedInProfilePage()), // Replace with your actual profile page
+        );},
         child: Padding(
             padding: const EdgeInsets.all(8.0),
             child: ClipRRect(
                 borderRadius: BorderRadius.circular(50),
-                child: Image.asset("assets/profile_1.jpeg")))),
+                child: Image.asset("assets/avatarrr.jpeg")))),
     title: Container(
         width: double.infinity,
         height: 40,
@@ -42,15 +46,15 @@ PreferredSizeWidget appBarWidget(BuildContext context,
                       MaterialPageRoute(
                           builder: (context) => MessagingScreen()));
                 },
-                icon: const Icon(Icons.chat_bubble_outline,
-                    size: 35, color: liMediumGrey),
+                icon: const Icon(Icons.message_rounded,
+                    size: 28, color: liMediumGrey),
               ),
               Positioned(
                 right: 1,
                 top: 1,
                 child: Container(
-                  height: 16,
-                  width: 16,
+                  height: 14,
+                  width: 14,
                   decoration: BoxDecoration(
                     color: Colors.red,
                     borderRadius: BorderRadius.circular(8),
@@ -76,9 +80,12 @@ PreferredSizeWidget appBarWidget(BuildContext context,
                 //         size: 35, color: liMediumGrey)),
                 // const SizedBox(width: 10),
                 IconButton(
-                  onPressed: () {},
-                  icon: const Icon(Icons.chat_bubble_outline,
-                      size: 35, color: liMediumGrey),
+                  onPressed: () { Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => MessagingScreen()));},
+                  icon: const Icon(Icons.message_rounded,
+                      size: 28, color: liMediumGrey),
                 ),
                 Positioned(
                   right: 1,

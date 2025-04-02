@@ -25,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         return windows;
       case TargetPlatform.linux:
@@ -44,37 +41,48 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyCDaq6DEjQu09SNJAcBqGTotx9qNunAq0o',
-    appId: '1:688739015905:web:cf5121a0cc0cdf5748eba0',
-    messagingSenderId: '688739015905',
-    projectId: 'edconnex-7e406',
-    authDomain: 'edconnex-7e406.firebaseapp.com',
-    storageBucket: 'edconnex-7e406.firebasestorage.app',
+    apiKey: 'AIzaSyAcHOquuYes0TOh7J21a59L8nVNc2wsBu8',
+    appId: '1:612421330214:web:b999b17d9665fed1fc4de7',
+    messagingSenderId: '612421330214',
+    projectId: 'edconnex-6dcdc',
+    authDomain: 'edconnex-6dcdc.firebaseapp.com',
+    storageBucket: 'edconnex-6dcdc.firebasestorage.app',
+    measurementId: 'G-D1GSZTHKMQ',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA7oynVaLn8e_BS863oQzsQB1OQgODz38Y',
-    appId: '1:688739015905:android:7c4517f65ef8e65148eba0',
-    messagingSenderId: '688739015905',
-    projectId: 'edconnex-7e406',
-    storageBucket: 'edconnex-7e406.firebasestorage.app',
+    apiKey: 'AIzaSyBoNNnegByymsrENkx--6a8XrmFawRK1sA',
+    appId: '1:612421330214:android:957e0f6661613f31fc4de7',
+    messagingSenderId: '612421330214',
+    projectId: 'edconnex-6dcdc',
+    storageBucket: 'edconnex-6dcdc.firebasestorage.app',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBYuHx7i6QGPnLDzG_Zc3k2iqz5Dy5pJMs',
-    appId: '1:688739015905:ios:580c0f3b7070f1e748eba0',
-    messagingSenderId: '688739015905',
-    projectId: 'edconnex-7e406',
-    storageBucket: 'edconnex-7e406.firebasestorage.app',
+    apiKey: 'AIzaSyCPgfn8DWILdt0s3nkkPbY7vIaK4U25eCc',
+    appId: '1:612421330214:ios:f030f61925468690fc4de7',
+    messagingSenderId: '612421330214',
+    projectId: 'edconnex-6dcdc',
+    storageBucket: 'edconnex-6dcdc.firebasestorage.app',
+    iosBundleId: 'com.example.edconnex',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyCPgfn8DWILdt0s3nkkPbY7vIaK4U25eCc',
+    appId: '1:612421330214:ios:f030f61925468690fc4de7',
+    messagingSenderId: '612421330214',
+    projectId: 'edconnex-6dcdc',
+    storageBucket: 'edconnex-6dcdc.firebasestorage.app',
     iosBundleId: 'com.example.edconnex',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyCDaq6DEjQu09SNJAcBqGTotx9qNunAq0o',
-    appId: '1:688739015905:web:a24335e7cca1d31e48eba0',
-    messagingSenderId: '688739015905',
-    projectId: 'edconnex-7e406',
-    authDomain: 'edconnex-7e406.firebaseapp.com',
-    storageBucket: 'edconnex-7e406.firebasestorage.app',
+    apiKey: 'AIzaSyAcHOquuYes0TOh7J21a59L8nVNc2wsBu8',
+    appId: '1:612421330214:web:88895abcc16b854bfc4de7',
+    messagingSenderId: '612421330214',
+    projectId: 'edconnex-6dcdc',
+    authDomain: 'edconnex-6dcdc.firebaseapp.com',
+    storageBucket: 'edconnex-6dcdc.firebasestorage.app',
+    measurementId: 'G-YB7XL79N9R',
   );
 }

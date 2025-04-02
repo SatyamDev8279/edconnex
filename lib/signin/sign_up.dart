@@ -1,6 +1,11 @@
+import 'dart:developer';
+
+import 'package:edconnex/Firebase/authentication.dart';
+import 'package:edconnex/Firebase/toast.dart';
 import 'package:edconnex/main/main_page/main_page.dart';
 import 'package:edconnex/signin/sign_up2..dart';
 import 'package:edconnex/main/main_page/widgets/widgetsforpages.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:back_button_interceptor/back_button_interceptor.dart';
@@ -14,9 +19,35 @@ class signup_page extends StatefulWidget {
 }
 
 class _signup_pageState extends State<signup_page> {
+  final FirebaseAuthService _auth = FirebaseAuthService();
   TextEditingController userNameController = TextEditingController();
   TextEditingController userEmailController = TextEditingController();
   TextEditingController userPasswordController = TextEditingController();
+  bool isSigningUp = false;
+
+  void _signUp() async {
+    setState(() {
+      isSigningUp = true;
+    });
+
+    String username = userNameController.text;
+    String email = userEmailController.text;
+    String password = userPasswordController.text;
+    log('I printed something to the console!');
+    User? user = await _auth.signUpWithEmailAndPassword(email, password);
+    log('I printed something to the console');
+    setState(() {
+      isSigningUp = false;
+    });
+    if (user != null) {
+      showToast(message: "User is successfully created");
+
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => mainpage()));
+    } else {
+      showToast(message: "Some error happend");
+    }
+  }
 
   final _formkey = GlobalKey<FormState>();
   bool _googleHold = false;
@@ -112,6 +143,7 @@ class _signup_pageState extends State<signup_page> {
                 padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
                 child: TextButton(
                   onPressed: () async {
+                    _signUp();
                     if (_isChecked == true) {
                       setState(() {
                         _isLoading = true;
@@ -137,10 +169,9 @@ class _signup_pageState extends State<signup_page> {
                         ? CircularProgressIndicator()
                         : TextButton(
                             onPressed: () {
-                              Navigator.push(
-                                  context,
-                                  MaterialPageRoute(
-                                      builder: (context) => mainpage()));
+                              log('pressed button');
+                              _signUp();
+                              log('done!');
                             },
                             child: Text(
                               "Sign Up",

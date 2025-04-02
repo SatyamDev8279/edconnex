@@ -12,12 +12,18 @@ import 'package:flutter/services.dart';
 import 'package:edconnex/Firebase/authentication.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:edconnex/phase3/profilepagecode.dart';
+
 Future<void> main() async {
   // Ensure that plugin services are initialized
-  WidgetsFlutterBinding.ensureInitialized();
+  WidgetsFlutterBinding.ensureInitialized(
+      // options: DefaultFirebaseOptions.currentPlatform,
+      );
 
   // Initialize Firebase
-  await Firebase.initializeApp();
+
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
 
   // Set the system UI overlay style
   SystemChrome.setSystemUIOverlayStyle(
@@ -35,7 +41,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(scaffoldBackgroundColor: Colors.white),
-      home:const LoginScreenOne(), // Adjust this to your actual login screen
+      home: const LoginScreenOne(), // Adjust this to your actual login screen
     );
   }
 }

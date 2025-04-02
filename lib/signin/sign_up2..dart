@@ -1,7 +1,10 @@
+import 'package:edconnex/Firebase/authentication.dart';
+import 'package:edconnex/Firebase/toast.dart';
 import 'package:edconnex/main/main_page/main_page.dart';
 import 'package:edconnex/signin/sign_up.dart';
 import 'package:edconnex/main/main_page/widgets/bottomsheet.dart';
 import 'package:edconnex/main/main_page/widgets/widgetsforpages.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
@@ -13,11 +16,37 @@ class sign_uptwo extends StatefulWidget {
 }
 
 class _sign_uptwoState extends State<sign_uptwo> {
+  bool _isSigning = false;
+  final FirebaseAuthService _auth = FirebaseAuthService();
+  final FirebaseAuth _firebaseAuth = FirebaseAuth.instance;
   final TextEditingController _userPasswordController = TextEditingController();
   final TextEditingController _userEmailController = TextEditingController();
   final TextEditingController _resetemailController = TextEditingController();
 
   bool _isLoading = false;
+
+  void _signIn() async {
+    setState(() {
+      _isSigning = true;
+    });
+
+    String email = _userEmailController.text;
+    String password = _userPasswordController.text;
+
+    User? user = await _auth.signInWithEmailAndPassword(email, password);
+
+    setState(() {
+      _isSigning = false;
+    });
+
+    if (user != null) {
+      showToast(message: "User is successfully signed in");
+      Navigator.push(
+          context, MaterialPageRoute(builder: (context) => mainpage()));
+    } else {
+      showToast(message: "some error occured");
+    }
+  }
 
   final _formkey = GlobalKey<FormState>();
   @override
@@ -109,8 +138,9 @@ class _sign_uptwoState extends State<sign_uptwo> {
                   padding: EdgeInsets.fromLTRB(0, 15, 0, 0),
                   child: TextButton(
                     onPressed: () async {
-                      Navigator.push(context,
-                          MaterialPageRoute(builder: (context) => mainpage()));
+                      // Navigator.push(context,
+                      //     MaterialPageRoute(builder: (context) => mainpage()));
+                      _signIn();
                     },
                     child: Container(
                       padding: const EdgeInsets.fromLTRB(100, 10, 100, 10),
@@ -156,7 +186,6 @@ class _sign_uptwoState extends State<sign_uptwo> {
                     ),
                     // Sign up
                     GestureDetector(
-
                       onTap: () {
                         // Navigator.push(
                         //     context,

@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "688739015905",
-    "project_id": "edconnex-7e406",
-    "storage_bucket": "edconnex-7e406.firebasestorage.app"
+    "project_number": "612421330214",
+    "project_id": "edconnex-6dcdc",
+    "storage_bucket": "edconnex-6dcdc.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:688739015905:android:7c4517f65ef8e65148eba0",
+        "mobilesdk_app_id": "1:612421330214:android:957e0f6661613f31fc4de7",
         "android_client_info": {
           "package_name": "com.example.edconnex"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA7oynVaLn8e_BS863oQzsQB1OQgODz38Y"
+          "current_key": "AIzaSyBoNNnegByymsrENkx--6a8XrmFawRK1sA"
         }
       ],
       "services": {
